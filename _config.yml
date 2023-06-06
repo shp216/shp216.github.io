@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Sehwan Park's Blog"
+title                    : #"Sehwan Park's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Sehwan Park"
