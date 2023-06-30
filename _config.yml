@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : #"Sehwan Park's Blog"
+title                    : "Sehwan Park's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Sehwan Park"
@@ -115,7 +115,7 @@ author:
       url: "mailto:qkrtpghks1214@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://gwynai.github.io/"
+      url: "https://shp216.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -124,7 +124,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/GwynAI"
+      url: "https://github.com/shp216"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/hownee_/"
