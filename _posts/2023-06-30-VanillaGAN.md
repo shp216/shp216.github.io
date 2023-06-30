@@ -11,9 +11,7 @@ toc: true
 
 ## Vanilla GAN
 
-The basic model that expresses GAN
-
-![Vanilla_GAN](../../images/2023-06-30-VanillaGAN/Vanilla_GAN.png)
+![Vanilla_GAN](../../images/Vanilla_GAN.png)
 
 ### Model
 
@@ -53,7 +51,7 @@ torch.optim.Adam(self.D.parameters(), self.d_lr)
 
 ### Loss Function
 
-![loss_func](../../images/2023-06-30-VanillaGAN/loss_func.png)
+![loss_func](../../images/loss_func.png)
 
 Discriminator learns to decide ``D(x)->1``, `` D(G(z))->0``
 
@@ -76,9 +74,7 @@ g_loss = self.criterion(outputs, real_labels)
 
 ### Results
 
-![Generated_img](../../images/2023-06-30-VanillaGAN/Generated_img.png)
-
-
+![Generated_img](../../images/Generated_img.png)
 
 ### Jensen-Shenen Divergence
 
