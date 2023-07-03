@@ -4,7 +4,7 @@ title: "Vanilla GAN"
 categories: GAN
 tag: [GAN]
 toc: true
-
+use_math: true
 
 
 ---
@@ -78,9 +78,7 @@ g_loss = self.criterion(outputs, real_labels)
 
 ### Jensen-Shenen Divergence
 
-$$
-V(G, D) = E_ {x \sim p_ {data} (x)} [ \log(D(x)) ] + E_ {z \sim p_ {z} (z)} [ \log(1-D(G(z))) ]
-$$
+$V(G, D) = E_ {x \sim p_ {data} (x)} [ \log(D(x)) ] + E_ {z \sim p_ {z} (z)} [ \log(1-D(G(z))) ]$
 
 
 
