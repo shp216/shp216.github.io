@@ -92,7 +92,7 @@ def get_todos_handler():
 
 <u>[Result]</u> - 원하는 todo_data의 value값을 리스트에 넣어서 response받은 것을 알 수 있음
 
-![0901-fastapi-2](/images/2023-09-01-fastapi_practice1/0901-fastapi-2.png)
+![0901-fastapi-2](/../images/2023-09-01-fastapi_practice1/0901-fastapi-2.png)
 
 ### Query Parameter
 
@@ -109,6 +109,6 @@ def get_todos_handler(order: str):
 
 <u>[Result]</u> - order 값에 DESC를 넣어주면 설계한 function대로 거꾸로 정렬되어서 응답을 받는 것을 알 수 있다.
 
-![0901-fastapi-3](/images/2023-09-01-fastapi_practice1/0901-fastapi-3.png)
+![0901-fastapi-3](/../images/2023-09-01-fastapi_practice1/0901-fastapi-3.png)
 
-![0901-fastapi-4](/images/2023-09-01-fastapi_practice1/0901-fastapi-4.png)
+![0901-fastapi-4](../images/2023-09-01-fastapi_practice1/0901-fastapi-4.png)

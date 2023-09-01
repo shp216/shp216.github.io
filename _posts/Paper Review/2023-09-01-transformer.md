@@ -28,7 +28,7 @@ Each element learns to refine its own representation by attending its context (o
 
 $\circ\$ More Specifically, as a weighted sum of other elements (not arbitrary weights) in the sentence.
 
-<img src="../images/2023-09-01-transformer/self-attention.png" alt="self-attention" style="zoom:50%;" />
+<img src="/../images/2023-09-01-transformer/self-attention.png" alt="self-attention" style="zoom:50%;" />
 
 Input token {$x_1, x_2, \dots, x_N$}이 존재할 때, 각각의 Input token $x_i$에 대해서 linear transformation을 통해 우리는 <u>Query, Key, Value</u>값들을 직접 mapping한다. 
 
