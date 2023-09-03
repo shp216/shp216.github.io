@@ -174,7 +174,15 @@ Multi-head Attention을 보면 입력 2가지는 Encoder로부터 오고, 1가�
 * Query: the query from decoder
 * Key, Value: the key and value from encoder
 
-번역해야 할 문장은 Encoder를 통해 같은 크기의 Z 벡터로 표현이 된다. 이때 이 Z벡터를 가지고 Key와 Value를 삼고, Decoder에서 Masked-Multi Head attention을 거친 vector들을 Query로 삼아 Encoder에서와 똑같은 방법으로 attention기법을 취하고 Feed forward를 거친다. 
+번역해야 할 문장은 Encoder를 통해 같은 크기의 Z 벡터로 표현이 된다. 이때 이 Z벡터를 가지고 Key와 Value를 삼고, Decoder에서 Masked-Multi Head attention을 거친 vector들을 Query로 삼아 Encoder에서와 똑같은 방법으로 attention기법을 취한다.
+
+#### <u>Step4. Feed-Forward</u>
+
+Encoder와 똑같다.
+
+#### <u>Step5. Linear + Softmax</u>
+
+Model을 거치고 나서 Input token 개수만큼 Output token이 나오면, 그 중에서 예측해야 할 token에 대해 Linear Layer를 쌓아서 Classifier를 둔다. 그래서 예측해야 할 token이 뭐가 되야 하는 지 softmax를 통해 확률을 계산하면서 가장 적합한 token을 선택하도록 하고 softmax값을 이용해 cross-entropy loss로 backpropagation을 진행한다.
 
 ## Reference
 
