@@ -152,6 +152,30 @@ $FFN(x) = max(0, xW_1+b_1)W_2 + b_2$
 
 Encoder에서는 multi-head attention을 사용해서 head수 만큼의 transformed된 Z vector를 output으로 내놓는다. 이 output을 통해서 Decoder에서는 auto-regressive하게 output sentence를 생성한다.
 
+#### <u>Step1. Decoder Input</u>
+
+우선 Decoder의 시작은 Encoder와 마찬가지로 특정 길이의 vector를 지정해두고 Embedding과 Positional Encoding을 거친다. Decoder Input은 특정 길이의 vector를 임의로 지정한다. 모델을 거치면서 [Start of Sentence]부터 Encoder의 input sentence에 대해 번역을 하거나 답변을 하는 Sentence를 [End of Sentence]가 예측되기 전까지 하나의 token씩 만든다. 
+
+#### <u>Step 2. Masked Multi-head Self-attention</u>
+
+Decoder의 구조를 보면 Encoder와 다르게 Masked Multi-head attention이 있고 Encoder와 같은 Multi-head attention이 다음에 존재한다. attention 구조가 2개인 이유와 Masked인 이유는 다음과 같다.
+
+1. ""트랜스포머 모델은 인공지능의 혁신이다". 
+2. [SOS] Trasformer model is the  _______ _______ _______ $\dots$  _______. (vector크기를 30이라고 가정)
+
+1번 한글 문장을 2번처럼 영어로 번역하는 경우를 가정하자. 현재 Transformer is the까지 번역이 되었고 그 다음 token을 예측해야 하는 경우인데 이 때 Model은 1번문장도 당연히 참고해서 그 다음 Word를 예측해야 하기도 하지만, 번역이 되고 있는 2번 문장도 앞에 어떤 단어들이 예측되어 나왔는지 고려해야 한다. 이렇듯 Decoder는 2번문장 자기 자신도 고려하는 경우 Masked Multi-head attention을 사용한다. 근데 왜 Masked일까? 
+
+Transformer에서 Sentence를 생성할 때, 모든 문장내의 token을 한꺼번에 생성하는 것이 아니라 번역해야 할 혹은 답변해야 할 문장을 고려하고, 번역하거나 답변을 하고 있는 문장의 token들까지 고려하면서 token을 End of Sentence가 나오기 이전까지 하나하나씩 생성한다. 앞에서도 언급했듯이, Transformer는 Output된 결과가 계속 Input으로 다시 들어가면서 반복되는 구조이기에 이번에는 4번째 token을 생성해야 하니까 input vector의 크기를 4로 하고 다음번엔 5로 늘리는 방식을 택할 수가 없다. 즉, 생성해야 할 token의 길이를 제한을 해두고 처음부터 크기가 일정해야 한다. Attention 구조에서는 모든 token을 고려하기에 만약 Decoder가 위의 2번 예시에서 처럼 [SOS]를 포함해 5번째 token까지 생성하고 6번째 token을 생성해야 하는 경우 그 뒤의 token들은 masked처리를 해서 Attention에 반영되지 않도록 하는 것이다. 크기를 초기에 지정을 해놨기에 아직 생성하지 않은  _______ 들도 다 임의의 벡터이다. masked처리를 하지 않는다면 다음번에 생성될 token에 지장을 줄 수 있다.(Attention시, 반영되기 때문이다.)
+
+#### <u>Step3. Encoder-Decoder Attention</u>
+
+Multi-head Attention을 보면 입력 2가지는 Encoder로부터 오고, 1가지는 Decoder로 부터 온다. 
+
+* Query: the query from decoder
+* Key, Value: the key and value from encoder
+
+번역해야 할 문장은 Encoder를 통해 같은 크기의 Z 벡터로 표현이 된다. 이때 이 Z벡터를 가지고 Key와 Value를 삼고, Decoder에서 Masked-Multi Head attention을 거친 vector들을 Query로 삼아 Encoder에서와 똑같은 방법으로 attention기법을 취하고 Feed forward를 거친다. 
+
 ## Reference
 
 https://www.youtube.com/watch?v=DVCbOfd09w8 - [딥러닝] Lecture 9. Attention Mechanism & Transformers I
