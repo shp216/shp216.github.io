@@ -186,6 +186,12 @@ def get_todos_handler(
 
 ## 1. GET API with ORM
 
+<정리>
+
+1. DB로 부터 server에 data를 받아와야 하므로 DB와 통신하여 데이터를 받아온다. [repository.py]
+2. Client가 server로 부터 받고자 하는 Data 형식이 있기에 이를 response.py에서 구현한다[response.py]
+3. DB로 부터 받아온 data는 ORM형식이므로 이를 Client가 받기 위해서는 pydantic형으로 변환해야 한다. 이를 main.py에서 GET API를 구현할 때, response.py에서 구현한 Class에 model_validate를 사용해 구현한다.[main.py]
+
 * Ex 01) GET API with ORM 전체 조회
 
 ```python
@@ -258,4 +264,83 @@ def get_todo_handler(
 
 class를 드래그해서 우클릭한 후, Refactor에 들어가서 move를 클릭해서 원하는 경로값을 설정해주면 된다.
 
+<정리>
+
+1. Client로 부터 받고 싶은 Data형식을 RequestBody를 만들어 원하는 형식으로 받는다. 이 때, 받는 data의 type은 pydantic이다. [response.py]
+2. Client로부터 받은 pydantic data를  DB에 저장해야 하기에 ORM형식으로 바꿔준다. ORM형식으로 바꿔주는 코드는 orm.py에서 classmethod를 이용해서 구현한다. [orm.py]
+3. 바꾼 ORM형식의 data를 DB와 통신하여 DB에 저장한다. [repository.py]
+4. 1,2,3번을 POST API 코드에 잘 구현한다 [main.py]
+
+
+
 <img src="/../images/2023-09-04-fastapi_practice2/fastapi orm 정리.jpg" alt="fastapi orm 정리" style="zoom:33%;" />
+
+```python
+@classmethod
+    def create(cls, request: CreateTodoRequest) -> "ToDo":
+        return cls(
+            contents=request.contents,
+            is_done=request.is_done
+        )
+        #id는 DB에서 결정해주기에 server에서 관리하지 않아도 된다.
+```
+
+```python
+def create_todo(session: Session, todo: ToDo):
+    session.add(instance=todo)
+    session.commit() #db save -> db에서 id를 할당! todo에는 id값이 존재 x
+    session.refresh(instance=todo) # id값이 todo에는 없기에 db에서 read하면 instance todo에 id값이 반영된다
+    return todo
+```
+
+```python
+@app.post("/todos", status_code=201)
+def create_todo_handler(
+        request: CreateTodoRequest, #RequestBody
+        session: Session = Depends(get_db)
+) -> List[ToDoSchema]:
+    todo: ToDo = ToDo.create(request=request) #pydantic -> orm, id=None
+    todo: ToDo = create_todo(session=session, todo=todo) #db에 todo값 post후, 다시 read하고 id값 반영해서 todo에 저장
+    #todo_data[request.id] = request.model_dump()
+    return [ToDoSchema.model_validate(todo, from_attributes=True)]
+```
+
+## 3. PATCH API with ORM
+
+실제 현업에서 구현하는 경우, True인지 False인지에 따라 값을 변화시키고 기능을 추가할 경우 유지보수의 용이함과 코드 블럭화등을 위해 Instance를 만들어 관리한다고 한다. 따라서 orm.py에 바꾸고자 하는 is_done값이 True이면 data의 is_done값을 True로 False이면 False로 바꿔서 반환하도록 하는 코드를 추가하였고 기능 구현은 main.py의 PATCH API내부에 구현하였다.
+
+<정리>
+
+1. Client로 부터 Update하고 싶은 Data형식을 RequestBody를 만들어 원하는 형식으로 받는다. 이 때, 받는 data의 type은 pydantic이다. Update 하고자 하는 column이 전부가 아니라면 Body를 이용해 원하는 값만 따로 받을 수 있다. [response.py]
+2. 바꾸고자 하는 data의 id를 통해 해당 id를 가진 data만 불러온다. [repository.py]
+3. data의 is_done값을 바꾼다. [main.py]
+4. 바꾼 data를 DB와 통신하여 DB에 저장한다. [repository.py]
+
+## 4. DELETE API with ORM
+
+<정리>
+
+1. Client로 부터 id값을 받아 해당 id에 속하는 data값을 DB로 부터 받아온다. [repository.py]
+2. 값이 존재하면 Server가 DB와 통신하여 해당 data를 DB로부터 삭제한다. [repository.py]
+
+DELETE API는 status code 204로 구현하였는데 204는 ResponseBody를 가질 수 없다. 주의!
+
+```python
+def delete_todo(session: Session, todo_id: int) -> None:
+    session.execute(Delete(ToDo).where(ToDo.id == todo_id))
+    session.commit()
+```
+
+```python
+@app.delete("/todos/{todo_id}", status_code=204)
+def delete_todo_handler(
+        todo_id: int,
+        session: Session = Depends(get_db),
+):
+    todo: ToDo | None = get_todo_by_todo_id(session=session, todo_id=todo_id)
+
+    if todo:
+        delete_todo(session=session, todo_id=todo_id)
+    raise HTTPException(status_code=404, detail="Todo Not Found")
+```
+
