@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "FastAPI 실습1"
+title: "FastAPI Basic"
 categories: FastAPI
 tag: [FastAPI]
 toc: true
@@ -15,7 +15,7 @@ use_math: true
 
 ---
 
-# FastAPI 실습1
+# FastAPI Basic
 
 ## 세팅
 
