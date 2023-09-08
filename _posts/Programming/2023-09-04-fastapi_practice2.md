@@ -190,7 +190,7 @@ def get_todos_handler(
 
 1. DB로 부터 server에 data를 받아와야 하므로 DB와 통신하여 데이터를 받아온다. [repository.py]
 2. Client가 server로 부터 받고자 하는 Data 형식이 있기에 이를 response.py에서 구현한다[response.py]
-3. DB로 부터 받아온 data는 ORM형식이므로 이를 Client가 받기 위해서는 pydantic형으로 변환해야 한다. 이를 main.py에서 GET API를 구현할 때, response.py에서 구현한 Class에 model_validate를 사용해 구현한다.[main.py]
+3. DB로 부터 받아온 data는 ORM형식이므로 이를 Client가 받기 위해서는 pydantic형으로 변환해야 한다. 이를 main.py에서 GET API를 구현할 때, response.py에서 구현한 Class에 model_validate를 사용해 구현한다.[main.py] s
 
 * Ex 01) GET API with ORM 전체 조회
 
