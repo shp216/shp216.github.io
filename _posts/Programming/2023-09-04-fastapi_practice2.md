@@ -1,5 +1,4 @@
 ---
-
 layout: single
 title: "FastAPI_DataBase"
 categories: FastAPI
@@ -8,7 +7,6 @@ toc: true
 author_profile: false
 Typora-root-url: ../
 use_math: true
-
 
 
 
@@ -186,7 +184,7 @@ def get_todos_handler(
 
 ## 1. GET API with ORM
 
-<정리>
+* 정리
 
 1. DB로 부터 server에 data를 받아와야 하므로 DB와 통신하여 데이터를 받아온다. [repository.py]
 2. Client가 server로 부터 받고자 하는 Data 형식이 있기에 이를 response.py에서 구현한다[response.py]
@@ -264,7 +262,7 @@ def get_todo_handler(
 
 class를 드래그해서 우클릭한 후, Refactor에 들어가서 move를 클릭해서 원하는 경로값을 설정해주면 된다.
 
-<정리>
+- 정리
 
 1. Client로 부터 받고 싶은 Data형식을 RequestBody를 만들어 원하는 형식으로 받는다. 이 때, 받는 data의 type은 pydantic이다. [response.py]
 2. Client로부터 받은 pydantic data를  DB에 저장해야 하기에 ORM형식으로 바꿔준다. ORM형식으로 바꿔주는 코드는 orm.py에서 classmethod를 이용해서 구현한다. [orm.py]
@@ -309,7 +307,7 @@ def create_todo_handler(
 
 실제 현업에서 구현하는 경우, True인지 False인지에 따라 값을 변화시키고 기능을 추가할 경우 유지보수의 용이함과 코드 블럭화등을 위해 Instance를 만들어 관리한다고 한다. 따라서 orm.py에 바꾸고자 하는 is_done값이 True이면 data의 is_done값을 True로 False이면 False로 바꿔서 반환하도록 하는 코드를 추가하였고 기능 구현은 main.py의 PATCH API내부에 구현하였다.
 
-<정리>
+* 정리
 
 1. Client로 부터 Update하고 싶은 Data형식을 RequestBody를 만들어 원하는 형식으로 받는다. 이 때, 받는 data의 type은 pydantic이다. Update 하고자 하는 column이 전부가 아니라면 Body를 이용해 원하는 값만 따로 받을 수 있다. [response.py]
 2. 바꾸고자 하는 data의 id를 통해 해당 id를 가진 data만 불러온다. [repository.py]
@@ -318,7 +316,7 @@ def create_todo_handler(
 
 ## 4. DELETE API with ORM
 
-<정리>
+* 정리
 
 1. Client로 부터 id값을 받아 해당 id에 속하는 data값을 DB로 부터 받아온다. [repository.py]
 2. 값이 존재하면 Server가 DB와 통신하여 해당 data를 DB로부터 삭제한다. [repository.py]
