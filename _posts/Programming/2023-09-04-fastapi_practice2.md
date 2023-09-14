@@ -34,6 +34,8 @@ Dockerfile 생성 -> Dockerfile, main code, dependencies 등을 포함한 Docker
 
 ```terminal
 docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=todos -e MYSQL_DATABASE=todos -d -v todos:/db --name todos mysql:8.0
+
+docker logs todos #
 ```
 
 docker run: docker 컨테이너를 동작시키는 명령어
@@ -77,6 +79,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import select
 
+# 'mysql+pymysql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}'
 DATABASE_URL = "mysql+pymysql://root:todos@127.0.0.1:3306/todos"
 engine = create_engine(DATABASE_URL, echo=True)
 SessionFactory = sessionmaker(autocommit=False, autoflush=False, bind=engine)
