@@ -35,6 +35,8 @@ Dockerfile 생성 -> Dockerfile, main code, dependencies 등을 포함한 Docker
 ```terminal
 docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=todos -e MYSQL_DATABASE=todos -d -v todos:/db --name todos mysql:8.0
 
+docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=psh -e MYSQL_DATABASE=psh -d -v psh:/db --name psh mysql:8.0
+
 docker logs todos #
 ```
 

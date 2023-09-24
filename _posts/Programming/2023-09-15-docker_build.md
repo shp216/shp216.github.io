@@ -21,14 +21,16 @@ use_math: true
 
 docker-compose up --build -d
 
-docker build --platform linux/amd64 -t uime .
+docker build --platform linux/amd64 -t (boong-fastapi) .---->얘만 해라
 
-docker image tag uime:latest shp216/uime:latest
+docker image tag boong-fastapi:latest shp216/boong-fastapi:latest
 
-docker push shp216/uime:latest 
+docker push shp216/boong-fastapi:latest --->얘도 해라
 
 -> dockerhub에 image 올라감
 
-docker pull shp216/uime:latest
+ bdocker pull shp216/boong-fastapi:latest
 
-docker run -d -p 8080:8080 shp216/uime:latest
+docker run -d -p 8080:8080 shp216/boong-fastapi:latest
+
+curl -X POST -H "Content-Type: application/json" -d '{"gender": "value1", "age": 123, "atmosphere" : "hello", "karlo_img" : "fqef", "up" : "123", "bottom": "123"}' http://localhost:8080/users
