@@ -58,3 +58,5 @@ $\triangledown_{x_t} log(P(x_t\|y)) := \triangledown_{x_t} log(P(x)) + \gamma\tr
 $\triangledown_{x_t} log(P(y\|x_t)) = \triangledown_{x_t} log(P(x_t\|y)) + \triangledown_{x_t} log(P(y)) - \triangledown_{x_t} log(P(x_t))$<br/>&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$:= \triangledown_{x_t} log(P(x_t\|y)) - \triangledown_{x_t} log(P(x_t))$
 
 $\triangledown_{x_t} log(P(x_t\|y)) = \gamma\triangledown_{x_t} log(P(x_t\|y)) + (1 - \gamma)\triangledown_{x_t} log(P(x_t))$
+
+DDIM -> $\sqrt{\alpha_{t-1}}P_t(\epsilon_{\theta}(x_t)) + D_t(\epsilon_{\theta}(x_t))$
