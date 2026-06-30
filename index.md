@@ -111,11 +111,6 @@ I received my B.S. in <a href="#">OO</a> from <a href="#">OO University</a> in 2
       <span class="cv-title"><b>1st Place, Grand Prize</b> &mdash; Regional Connection SW Presentation, Seoul Campus Town</span>
       <span class="cv-date">Sep. 2020</span>
     </div>
-    <div class="cv-sub">
-      A bus-boarding intention communication service using NFC technology (&ldquo;Take your card, Take your time, Take your bus.&rdquo;).
-      Directed the project <b>SHP: Stop Here Please</b> &mdash; primarily responsible for developing Wi-Fi modules, efficiency algorithms, and project management.
-      The Grand Prize was granted by the Mayor of Seoul; the project also won the Grand Prize at the Entrepreneurship Idea Competition, SJU.
-    </div>
   </div>
   <div class="cv-item">
     <div class="cv-head">
