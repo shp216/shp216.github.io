@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title>{{ site.name | default: site.title }}</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.homepage_description | default: site.description }}">
+    {% if site.keywords %}
+    <meta name="keywords" content="{{ site.keywords }}">
+    {% endif %}
+    {% if site.canonical %}
+    <link rel="canonical" href="{{ site.canonical }}"/>
+    {% endif %}
+
+    {% if site.favicon_dark %}
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
+    {% endif %}
+    {% if site.favicon %}
+    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
+    {% endif %}
+    <script src="{{ '/assets/js/favicon-switcher.js' | relative_url }}" type="application/javascript"></script>
+
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/pub.css' | relative_url }}">
+    <script src="{{ '/assets/js/github-stars.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/jquery.js' | relative_url }}"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+
+        {% if site.avatar %}
+        <a class="image avatar"><img src="{{ site.avatar | relative_url }}" alt="avatar" onContextMenu="return false" /></a>
+        {% endif %}
+
+        <h1>{{ site.name | default: site.title }}</h1>
+
+        {% if site.position %}
+        <span class="header-position">{{ site.position }}</span>
+        {% endif %}
+        {% if site.affiliation %}
+        <span class="header-affiliation">{{ site.affiliation }}</span>
+        {% endif %}
+
+        <div class="social-icons">
+          {% if site.email %}
+          <a href="mailto:{{ site.email }}" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          {% endif %}
+          {% if site.google_scholar %}
+          <a href="{{ site.google_scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <i class="ai ai-google-scholar"></i>
+          </a>
+          {% endif %}
+          {% if site.cv_link %}
+          <a href="{{ site.cv_link }}" target="_blank" rel="noopener" aria-label="CV">
+            <i class="ai ai-cv"></i>
+          </a>
+          {% endif %}
+          {% if site.github_link %}
+          <a href="{{ site.github_link }}" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          {% if site.linkedin %}
+          <a href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          {% endif %}
+          {% if site.twitter_link %}
+          <a href="{{ site.twitter_link }}" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          {% endif %}
+          {% if site.blog_link %}
+          <a href="{{ site.blog_link | relative_url }}" aria-label="Blog">
+            <i class="fas fa-blog"></i>
+          </a>
+          {% endif %}
+        </div>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      <br>
+
+      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+
+      </section>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+  </body>
+</html>
