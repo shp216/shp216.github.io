@@ -26,7 +26,7 @@ I received my B.S. in <a href="#">OO</a> from <a href="#">OO University</a> in 2
 #news-list li { margin-bottom: 4px; list-style: disc; }
 </style>
 
-## Selected Research
+## Publications
 
 <div class="publications">
 <ol class="bibliography">
@@ -70,3 +70,70 @@ I received my B.S. in <a href="#">OO</a> from <a href="#">OO University</a> in 2
 
 </ol>
 </div>
+
+## Education
+
+<div class="cv-list">
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>M.S. in Computer Science</b>, <a href="https://www.korea.edu/" target="_blank" rel="noopener">Korea University</a></span>
+      <span class="cv-date">2025.03 &ndash; 2027.02 (expected)</span>
+    </div>
+    <div class="cv-sub">Multimodal Interactive Intelligence Lab (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>) &middot; Advisor: Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a></div>
+  </div>
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>B.S. in Intelligence Mechatronics Engineering</b>, <a href="https://www.sejong.ac.kr/" target="_blank" rel="noopener">Sejong University</a></span>
+      <span class="cv-date">2019.03 &ndash; 2025.02</span>
+    </div>
+    <div class="cv-sub">MINES Lab &middot; Advisor: Prof. Hyung Seok Kim &middot; <em>Graduated Summa Cum Laude (GPA 4.3/4.5)</em></div>
+  </div>
+</div>
+
+## Awards &amp; Honors
+
+<div class="cv-list">
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>Qualcomm Innovation Fellowship Korea</b> &mdash; Finalist</span>
+      <span class="cv-date">Nov. 2025</span>
+    </div>
+    <div class="cv-sub">For <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> (CVPR 2025).</div>
+  </div>
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>2nd-rank Honor Scholarship</b> (GPA 4.5/4.5)</span>
+      <span class="cv-date">Spring 2023</span>
+    </div>
+  </div>
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>1st Place, Grand Prize</b> &mdash; Regional Connection SW Presentation, Seoul Campus Town</span>
+      <span class="cv-date">Sep. 2020</span>
+    </div>
+    <div class="cv-sub">
+      A bus-boarding intention communication service using NFC technology (&ldquo;Take your card, Take your time, Take your bus.&rdquo;).
+      Directed the project <b>SHP: Stop Here Please</b> &mdash; primarily responsible for developing Wi-Fi modules, efficiency algorithms, and project management.
+      The Grand Prize was granted by the Mayor of Seoul; the project also won the Grand Prize at the Entrepreneurship Idea Competition, SJU.
+    </div>
+  </div>
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>1st-rank Honor Scholarship</b> (GPA 4.5/4.5)</span>
+      <span class="cv-date">Fall 2019</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.cv-list { margin: 0 0 12px; }
+.cv-item { margin-bottom: 12px; }
+.cv-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.cv-title { font-size: 0.98rem; }
+.cv-date { color: #888; font-size: 0.9rem; white-space: nowrap; }
+.cv-sub { font-size: 0.9rem; line-height: 1.5; color: #555; margin-top: 2px; }
+@media (prefers-color-scheme: dark) {
+  .cv-date { color: #9a9ba1; }
+  .cv-sub { color: #b8b9bf; }
+}
+</style>
