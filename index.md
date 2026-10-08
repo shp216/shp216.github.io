@@ -9,13 +9,10 @@ I am a graduate student at the <b>Multimodal Interactive Intelligence Laboratory
 
 My research interests lie in <b>generative AI</b> and <b>multimodal learning</b>, with a focus on <b>diffusion models</b> — including efficient diffusion model compression and cross-modal generation.
 
-<!-- TODO: 학부(B.S.) 학교/전공/연도를 알려주시면 한 줄 추가하겠습니다. 예:
-I received my B.S. in <a href="#">OO</a> from <a href="#">OO University</a> in 20XX.
--->
-
 ## <span style="color:#F88017">News</span>
 
 <ul id="news-list">
+<li><b>[Aug. 2026]</b> <a href="https://arxiv.org/abs/2609.14657" target="_blank" rel="noopener">Compositional SVG Generation</a> is accepted to <a href="https://2026.emnlp.org/" target="_blank" rel="noopener">EMNLP 2026</a>.</li>
 <li><b>[Nov. 2025]</b> <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> is selected as a <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship" target="_blank" rel="noopener">Qualcomm Innovation Fellowship</a> Korea Finalist.</li>
 <li><b>[May 2025]</b> <a href="https://arxiv.org/abs/2507.12723" target="_blank" rel="noopener">Cross-Modal Watermarking</a> is accepted to <a href="https://www.interspeech2025.org/" target="_blank" rel="noopener">Interspeech 2025</a>.</li>
 <li><b>[Feb. 2025]</b> <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> is accepted to <a href="https://cvpr.thecvf.com/Conferences/2025" target="_blank" rel="noopener">CVPR 2025</a>.</li>
@@ -30,6 +27,25 @@ I received my B.S. in <a href="#">OO</a> from <a href="#">OO University</a> in 2
 
 <div class="publications">
 <ol class="bibliography">
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="/assets/research/semantic_svg.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">EMNLP</abbr>
+  </div>
+  <div id="semantic-svg-generation" class="col-sm-9" style="position: relative;width: 100%;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="https://arxiv.org/abs/2609.14657" target="_blank" rel="noopener">Compositional SVG Generation via VLM-Driven Hierarchical Semantic Parsing</a></div>
+      <div class="author"><strong>Sehwan Park*</strong>, T. Kim*, G. Han, D. Kim, S. W. Kim, P. H. Seo (*co-first)</div>
+      <div class="periodical"><em><strong>EMNLP 2026</strong></em></div>
+    <div class="links">
+      <a href="https://arxiv.org/pdf/2609.14657" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      <a href="https://ku-miil.github.io/semantic-svg-generation/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project page</a>
+      <a href="https://github.com/KU-MIIL/semantic-svg-generation" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+    </div>
+  </div>
+</div>
+</li>
 
 <li>
 <div class="pub-row">
