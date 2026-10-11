@@ -3,23 +3,21 @@ layout: homepage
 homepage_description: "Sehwan Park — Graduate student at MIIL, Korea University. Generative AI, diffusion models, multimodal learning."
 ---
 
-## About Me
+I am an M.S. student at the <a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">Multimodal Interactive Intelligence Laboratory (MIIL)</a>, Korea University, advised by Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a>. I also work closely with Prof. <a href="https://seung-kim.github.io/seungkim/" target="_blank" rel="noopener">Seung Wook Kim</a>.
 
-I am a graduate student at the <b>Multimodal Interactive Intelligence Laboratory (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>)</b>, <a href="https://www.korea.edu/" target="_blank" rel="noopener">Korea University</a>, advised by Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a>.
+I work on <b>generative AI for vision</b>, from diffusion distillation to controllable and compositional generation. My long-term goal is to <b>build generative models that learn from limited data</b> by capturing the physical and relational structure of the visual world, so that they can serve as world models for machines that perceive, imagine, and act.
 
-My research interests lie in <b>generative AI</b> and <b>multimodal learning</b>, with a focus on <b>diffusion models</b> — including efficient diffusion model compression and cross-modal generation.
-
-## <span style="color:#F88017">News</span>
+## News
 
 <ul id="news-list">
-<li><b>[Aug. 2026]</b> <a href="https://arxiv.org/abs/2609.14657" target="_blank" rel="noopener">Compositional SVG Generation</a> is accepted to <a href="https://2026.emnlp.org/" target="_blank" rel="noopener">EMNLP 2026</a>.</li>
-<li><b>[Nov. 2025]</b> <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> is selected as a <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship" target="_blank" rel="noopener">Qualcomm Innovation Fellowship</a> Korea Finalist.</li>
-<li><b>[May 2025]</b> <a href="https://arxiv.org/abs/2507.12723" target="_blank" rel="noopener">Cross-Modal Watermarking</a> is accepted to <a href="https://www.interspeech2025.org/" target="_blank" rel="noopener">Interspeech 2025</a>.</li>
-<li><b>[Feb. 2025]</b> <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> is accepted to <a href="https://cvpr.thecvf.com/Conferences/2025" target="_blank" rel="noopener">CVPR 2025</a>.</li>
+<li><b>[Aug. 2026]</b> <a href="https://arxiv.org/abs/2609.14657" target="_blank" rel="noopener">Compositional SVG Generation</a> is accepted to EMNLP 2026.</li>
+<li><b>[Nov. 2025]</b> <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> is selected as a Qualcomm Innovation Fellowship Korea Finalist.</li>
+<li><b>[May 2025]</b> <a href="https://arxiv.org/abs/2507.12723" target="_blank" rel="noopener">Cross-Modal Watermarking</a> is accepted to Interspeech 2025.</li>
+<li><b>[Feb. 2025]</b> <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> is accepted to CVPR 2025.</li>
 </ul>
 
 <style>
-#news-list { font-size: 0.95rem; line-height: 1.6; padding-left: 15px; margin-top: 0; margin-bottom: 0; }
+#news-list { font-size: 0.95rem; line-height: 1.6; padding-left: 15px; margin-top: 0; margin-bottom: 32px; }
 #news-list li { margin-bottom: 4px; list-style: disc; }
 </style>
 
@@ -92,17 +90,17 @@ My research interests lie in <b>generative AI</b> and <b>multimodal learning</b>
 <div class="cv-list">
   <div class="cv-item">
     <div class="cv-head">
-      <span class="cv-title"><b>M.S. in Computer Science</b>, <a href="https://www.korea.edu/" target="_blank" rel="noopener">Korea University</a></span>
+      <span class="cv-title"><b>M.S. in Computer Science</b>, Korea University</span>
       <span class="cv-date">2025.03 &ndash; 2027.02 (expected)</span>
     </div>
     <div class="cv-sub">Multimodal Interactive Intelligence Lab (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>) &middot; Advisor: Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a></div>
   </div>
   <div class="cv-item">
     <div class="cv-head">
-      <span class="cv-title"><b>B.S. in Intelligence Mechatronics Engineering</b>, <a href="https://www.sejong.ac.kr/" target="_blank" rel="noopener">Sejong University</a></span>
+      <span class="cv-title"><b>B.S. in Intelligence Mechatronics Engineering</b>, Sejong University</span>
       <span class="cv-date">2019.03 &ndash; 2025.02</span>
     </div>
-    <div class="cv-sub">MINES Lab &middot; Advisor: Prof. Hyung Seok Kim &middot; <em>Graduated Summa Cum Laude (GPA 4.3/4.5)</em></div>
+    <div class="cv-sub">MINES Lab &middot; Advisor: Prof. Hyung Seok Kim &middot; Graduated Summa Cum Laude (GPA 4.3/4.5)</div>
   </div>
 </div>
 
