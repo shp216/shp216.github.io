@@ -33,7 +33,7 @@ avatar                   : "/assets/images/sehwan.jpg"
 favicon                  : "/assets/images/sehwan.jpg"
 favicon_dark             : "/assets/images/sehwan.jpg"
 canonical                : "https://shp216.github.io/"
-blog_link                : "/blog/"                # link from homepage -> blog
+blog_link                :                          # blog still lives at /blog/, icon hidden
 # --- contact / social links (leave blank to hide the icon) ---
 email                    : "qkrtpghks1214@gmail.com"
 google_scholar           :                          # TODO: your Google Scholar profile URL
