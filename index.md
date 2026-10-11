@@ -93,7 +93,7 @@ I work on <b>generative AI for vision</b>, from diffusion distillation to contro
       <span class="cv-title"><b>M.S. in Computer Science and Engineering</b>, Korea University</span>
       <span class="cv-date">2025.03 &ndash; 2027.08 (expected)</span>
     </div>
-    <div class="cv-sub">Multimodal Interactive Intelligence Lab (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>) &middot; Advisor: Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a> &middot; GPA 4.25/4.5</div>
+    <div class="cv-sub">Multimodal Interactive Intelligence Lab (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>) &middot; Advisor: Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a></div>
   </div>
   <div class="cv-item">
     <div class="cv-head">
