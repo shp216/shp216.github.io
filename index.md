@@ -90,17 +90,17 @@ I work on <b>generative AI for vision</b>, from diffusion distillation to contro
 <div class="cv-list">
   <div class="cv-item">
     <div class="cv-head">
-      <span class="cv-title"><b>M.S. in Computer Science</b>, Korea University</span>
-      <span class="cv-date">2025.03 &ndash; 2027.02 (expected)</span>
+      <span class="cv-title"><b>M.S. in Computer Science and Engineering</b>, Korea University</span>
+      <span class="cv-date">2025.03 &ndash; 2027.08 (expected)</span>
     </div>
-    <div class="cv-sub">Multimodal Interactive Intelligence Lab (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>) &middot; Advisor: Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a></div>
+    <div class="cv-sub">Multimodal Interactive Intelligence Lab (<a href="https://miil.korea.ac.kr/" target="_blank" rel="noopener">MIIL</a>) &middot; Advisor: Prof. <a href="https://phseo.github.io/" target="_blank" rel="noopener">Paul Hongsuck Seo</a> &middot; GPA 4.25/4.5</div>
   </div>
   <div class="cv-item">
     <div class="cv-head">
       <span class="cv-title"><b>B.S. in Intelligence Mechatronics Engineering</b>, Sejong University</span>
       <span class="cv-date">2019.03 &ndash; 2025.02</span>
     </div>
-    <div class="cv-sub">MINES Lab &middot; Advisor: Prof. Hyung Seok Kim &middot; Graduated Summa Cum Laude (GPA 4.3/4.5)</div>
+    <div class="cv-sub">MINES Lab &middot; Advisor: Prof. Hyung Seok Kim &middot; Graduated Summa Cum Laude (GPA 4.31/4.5)</div>
   </div>
 </div>
 
@@ -113,6 +113,12 @@ I work on <b>generative AI for vision</b>, from diffusion distillation to contro
       <span class="cv-date">Nov. 2025</span>
     </div>
     <div class="cv-sub">For <a href="https://arxiv.org/abs/2504.02011" target="_blank" rel="noopener">Random Conditioning</a> (CVPR 2025).</div>
+  </div>
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>2nd-rank Honor Scholarship</b> (GPA 4.5/4.5)</span>
+      <span class="cv-date">Spring 2024</span>
+    </div>
   </div>
   <div class="cv-item">
     <div class="cv-head">
@@ -131,6 +137,25 @@ I work on <b>generative AI for vision</b>, from diffusion distillation to contro
       <span class="cv-title"><b>1st-rank Honor Scholarship</b> (GPA 4.5/4.5)</span>
       <span class="cv-date">Fall 2019</span>
     </div>
+  </div>
+</div>
+
+## Teaching
+
+<div class="cv-list">
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>Online Lecturer</b>, <em>Practice: Diffusion Models</em></span>
+      <span class="cv-date">Sep. 2025</span>
+    </div>
+    <div class="cv-sub">Recorded for Samsung Electronics</div>
+  </div>
+  <div class="cv-item">
+    <div class="cv-head">
+      <span class="cv-title"><b>Teaching Assistant</b>, Samsung Electronics AI Expert Program</span>
+      <span class="cv-date">Aug. 2025</span>
+    </div>
+    <div class="cv-sub">Action Recognition and Video Understanding &middot; Visual Question Answering</div>
   </div>
 </div>
 
