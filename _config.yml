@@ -29,9 +29,9 @@ description              : "공부한 모든 것들을 기록합시다..!"
 position                 : "M.S. Student"          # TODO: 학위과정 확인 (M.S. / 통합과정 등)
 affiliation              : "MIIL, Korea University"
 keywords                 : "Generative AI, Diffusion Models, Computer Vision, Machine Learning"
-avatar                   : "/assets/images/Avatar.jpeg"   # reuse existing profile photo
-favicon                  : "/assets/images/Avatar.jpeg"   # TODO: replace with a real favicon if desired
-favicon_dark             : "/assets/images/Avatar.jpeg"
+avatar                   : "/assets/images/sehwan.jpg"
+favicon                  : "/assets/images/sehwan.jpg"
+favicon_dark             : "/assets/images/sehwan.jpg"
 canonical                : "https://shp216.github.io/"
 blog_link                : "/blog/"                # link from homepage -> blog
 # --- contact / social links (leave blank to hide the icon) ---

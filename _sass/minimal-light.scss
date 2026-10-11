@@ -98,7 +98,7 @@ papertitle {
     }
 
     .image.avatar {
-      border-radius: 100%;
+      border-radius: 0;
     }
 
       .image.avatar:before {
@@ -106,9 +106,11 @@ papertitle {
       }
 
       .image.avatar img {
-        border-radius: 100%;
-        width: 50%;
-        padding:20px;
+        border-radius: 6px;
+        width: 160px;
+        padding: 0;
+        margin: 10px 0 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
       }
 
     #header .image.avatar {
@@ -400,9 +402,9 @@ footer {
 
 
    .image.avatar img {
-        border-radius: 100%;
-        width: 117px;
-        padding:20px;
+        border-radius: 6px;
+        width: 140px;
+        padding: 0;
       }
   #head1o2 {
     visibility: hidden;
@@ -447,9 +449,9 @@ footer {
   }
 
   .image.avatar img {
-      border-radius: 100%;
-      width: 95px;
-      padding:20px;
+      border-radius: 6px;
+      width: 120px;
+      padding: 0;
   }
   #head1o2 {
     visibility: hidden;
