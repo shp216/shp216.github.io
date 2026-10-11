@@ -36,7 +36,7 @@ canonical                : "https://shp216.github.io/"
 blog_link                :                          # blog still lives at /blog/, icon hidden
 # --- contact / social links (leave blank to hide the icon) ---
 email                    : "qkrtpghks1214@gmail.com"
-google_scholar           :                          # TODO: your Google Scholar profile URL
+google_scholar           : "https://scholar.google.com/citations?user=iAeuYhoAAAAJ"
 cv_link                  : "/assets/cv/sehwanpark_cv.pdf"
 github_link              : "https://github.com/shp216"
 linkedin                 : "https://www.linkedin.com/in/sehwan-park-42564b209/"
